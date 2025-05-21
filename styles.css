@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111111; /* Professional deep black */
+  font-family: 'Poppins', sans-serif;
+}
+
+.text {
+  font-size: 50px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 2px 16px #00ffe7, 0 0 32px #1e90ff;
+}
+
+.animated-word {
+  display: inline-block;
+  min-width: 200px;
+  position: relative;
+  height: 60px;
+}
+
+.animated-word::before {
+  content: "excellent";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  animation: slideWord 3s infinite;
+  text-shadow: 0 2px 12px #00ffe7, 0 0 24px #1e90ff;
+  transition: color 0.3s;
+}
+
+@keyframes slideWord {
+  0%, 12.5% {
+    content: "excellent";
+    color: #00ffe7;
+  }
+  12.5%, 25% {
+    content: "Unique";
+    color: #ffb347;
+  }
+  25%, 37.5% {
+    content: "genius";
+    color: #7fff00;
+  }
+  37.5%, 50% {
+    content: "handsome";
+    color: #1e90ff;
+  }
+  50%, 62.5% {
+    content: "creative";
+    color: #ff69b4;
+  }
+  62.5%, 75% {
+    content: "dedicated";
+    color: #ffd700;
+  }
+  75%, 87.5% {
+    content: "innovative";
+    color: #ff6347;
+  }
+  87.5%, 100% {
+    content: "visionary";
+    color: #a020f0;
+  }
+}
